@@ -6,30 +6,30 @@ ADDAX est une plateforme de paiement cross border basé sur une blockchain priv�
 Ce projet comporte un client qui expose un réseau blockchain à travers une REST API.
 
   1-  Structure Code
-  
+
   2-  Installation
-  
-  3-  Exécution des tests 
- 
+
+  3-  Exécution des tests
+
 ## Structure Code
-Le projet comporte deux dossiers: 
-  - **/client**: Application Web développée en Angular 2  et qui communique avec une REST API.
-  - **/hack Network**: Le framework de Hyperledger Composer, il sert à développer  sur Hyperledger Fabric et à deployer une REST API et comporte: 
+Le projet comporte deux dossiers:
+  - **/web-client**: Application Web développée en Angular 2  et qui communique avec une REST API.
+  - **/hack Network**: Le framework de Hyperledger Composer, il sert à développer  sur Hyperledger Fabric et à deployer une REST API et comporte:
     - **/models/org.acme.hacknetwork** : définit le modèle   
     - **/lib/logic.js** : définit la modélisation du chain code "Smart Contract"  
 
 ## Installation
-- **Pour le client**: 
+- **Pour le client**:
   - Pour une exécution sur votre machine :
-  
+
 1-  Cloner ADDAX repo à partir de https://github.com/21naza/ADDAX
 ```sh
 $ git clone https://github.com/21naza/ADDAX
 ```
 2- ADDAX nécessite [Node.js](https://nodejs.org/) v8.9+ et Angular CLI
 ```sh
-$ cd client 
-$ npm install 
+$ cd web-client
+$ npm install
 $ npm install -g @angular/cli
 $ ng serve
 ```
@@ -38,10 +38,10 @@ $ ng serve
 ```sh
 54.246.136.60:4200
 ```
-* **Pour le hack Network REST API**: 
+* **Pour le hack Network REST API**:
 Accédez à l'adresse
 ```sh
-54.200.124.43:3000 
+54.200.124.43:3000
 ```
 ### Exécution des tests :
 On mène le test à partir de l'application web client
@@ -54,15 +54,9 @@ Dans une version ultérieure plus developpée, chaque partie (Banque, PME et ré
 [![Image](https://i.goopics.net/pEZ8P.png)](https://goopics.net/i/pEZ8P)
 * **On simule une transaction** : une PME, cliente chez une banque du réseau,  transfère une somme à une autre PME localisée dans un autre pays de manière rapide, transparente et sécurisée.
 [![Image](https://i.goopics.net/723lN.png)](https://goopics.net/i/723lN)
-La transaction est bien effectuée! 
+La transaction est bien effectuée!
 [![Image](https://i.goopics.net/Ldkxd.png)](https://goopics.net/i/Ldkxd)
 
  # Copyright  &copy;
 
- ##### RoyalFlush 
-
-
-
-
-   
- 
+ ##### RoyalFlush
