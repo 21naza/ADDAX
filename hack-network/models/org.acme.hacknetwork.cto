@@ -1,0 +1,43 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace org.acme.hacknetwork
+
+participant CompanyParticipant identified by companyName {
+  o String companyName
+  o String country
+  --> BankParticipant bank
+  o Integer balance default=1000000
+}
+
+participant BankParticipant identified by bankName {
+  o String bankName
+  o String country
+}
+
+
+
+transaction CoToCoTransaction {
+  --> CompanyParticipant company1
+  --> CompanyParticipant company2
+  o Integer value
+}
+
+event CoToBank {
+  --> CompanyParticipant company1
+  --> BankParticipant bank1
+  o Integer value
+}
+
+event BankToBank {
+  --> BankParticipant bank1
+  --> BankParticipant bank2
+  o Integer value
+}
+
+event BankToCo {
+  --> BankParticipant bank2
+  --> CompanyParticipant company2
+  o Integer value
+}
